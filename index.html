@@ -1,25 +1,764 @@
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Welcome to Vaibhavam</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Vaibhavam | Coffee, Tea, Juice & Meals</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fffaf3;
+    }
+
+    header {
+      background: #6b2d1a;
+      color: white;
+      padding: 8px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: 110px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand img {
+      width: 110px;
+      height: 90px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      color: #ffd26a;
+      font-size: 31px;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+
+    .brand-text p {
+      margin: 6px 0 0;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd27f;
+    }
+
+    .hero {
+      min-height: 80vh;
+      padding: 80px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.58),
+          rgba(0, 0, 0, 0.58)
+        ),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f")
+        center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      margin-bottom: 28px;
+      max-width: 650px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      margin: 5px 8px 5px 0;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      background: #f4a62a;
+      color: #222;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #6b2d1a;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #6b2d1a;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 17px;
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 42px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      color: #6b2d1a;
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .about-text p {
+      margin-bottom: 14px;
+      font-size: 17px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-card h3 {
+      color: #6b2d1a;
+      margin-bottom: 10px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+      transition: 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .menu-content {
+      padding: 20px;
+    }
+
+    .menu-content h3 {
+      color: #6b2d1a;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #d2691e;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+    }
+
+    .contact-box h2 {
+      color: #6b2d1a;
+      margin-bottom: 18px;
+    }
+
+    .contact-box p {
+      margin-bottom: 16px;
+    }
+
+    .contact-box a {
+      color: #6b2d1a;
+    }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: #32160e;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .whatsapp-floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        padding: 8px 5%;
+      }
+
+      .brand {
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+
+      .brand img {
+        width: 95px;
+        height: 80px;
+      }
+
+      .brand-text h1 {
+        font-size: 27px;
+      }
+
+      .brand-text p {
+        font-size: 10px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        padding-bottom: 12px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 72vh;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .menu-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        min-height: auto;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brand img {
+        width: 72px;
+        height: 68px;
+      }
+
+      .brand-text h1 {
+        font-size: 21px;
+      }
+
+      .brand-text p {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 70px 6%;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .features,
+      .menu-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid img {
+        height: 220px;
+      }
+
+      .whatsapp-floating {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">
+      <img
+        src="./logo.png"
+        alt="Vaibhavam Logo"
+      >
+
+      <div class="brand-text">
+        <h1>VAIBHAVAM</h1>
+        <p>COFFEE • TEA • JUICE • MEALS</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Vaibhavam</h1>
+
+      <p>
+        Traditional taste, fresh coffee, tea, juice and delicious meals
+        in the heart of Polur.
+      </p>
+
+      <a href="#menu" class="btn">
+        View Menu
+      </a>
+
+      <a href="tel:+919999999999" class="btn secondary">
+        Call Now
+      </a>
+
+      <a
+        href="https://wa.me/919999999999"
+        class="btn secondary"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About Vaibhavam</h2>
+
+      <p>
+        Good food, good mood and warm hospitality.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Traditional Taste in a Comfortable Place</h2>
+
+        <p>
+          Vaibhavam is a family-friendly hotel and coffee shop in Polur.
+          We serve fresh coffee, tea, juices, snacks and traditional meals.
+        </p>
+
+        <p>
+          Our location is convenient for local families, hospital visitors,
+          travellers and pilgrims visiting Tiruvannamalai.
+        </p>
+
+        <p>
+          We focus on cleanliness, quality ingredients, affordable prices
+          and friendly service.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img
+          src="https://images.unsplash.com/photo-1552566626-52f8b828add9"
+          alt="Restaurant interior"
+        >
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Why Choose Us?</h2>
+    </div>
+
+    <div class="features">
+      <div class="feature-card">
+        <h3>Fresh Food</h3>
+        <p>Food and beverages prepared fresh every day.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Traditional Taste</h3>
+        <p>Authentic South Indian flavours and recipes.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Family Friendly</h3>
+        <p>A clean and comfortable place for families.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Parking</h3>
+        <p>Convenient parking space for customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="section-title">
+      <h2>Popular Menu</h2>
+
+      <p>
+        Coffee, tea, juice, snacks and traditional meals.
+      </p>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+          alt="Filter Coffee"
+        >
+
+        <div class="menu-content">
+          <h3>Filter Coffee</h3>
+          <p>Traditional South Indian filter coffee.</p>
+          <div class="price">₹25</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img
+          src="https://images.unsplash.com/photo-1565557623262-b51c2513a641"
+          alt="South Indian Meals"
+        >
+
+        <div class="menu-content">
+          <h3>South Indian Meals</h3>
+          <p>Rice, sambar, rasam, vegetables, curd and accompaniments.</p>
+          <div class="price">₹80</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img
+          src="https://images.unsplash.com/photo-1601050690597-df0568f70950"
+          alt="Evening Snacks"
+        >
+
+        <div class="menu-content">
+          <h3>Evening Snacks</h3>
+          <p>Freshly prepared vadai, bajji and other snacks.</p>
+          <div class="price">From ₹15</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img
+          src="https://images.unsplash.com/photo-1600271886742-f049cd451bba"
+          alt="Fresh Juice"
+        >
+
+        <div class="menu-content">
+          <h3>Fresh Juice</h3>
+          <p>Seasonal fruit juices prepared fresh.</p>
+          <div class="price">From ₹40</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img
+          src="https://images.unsplash.com/photo-1544787219-7f47ccb76574"
+          alt="Tea"
+        >
+
+        <div class="menu-content">
+          <h3>Tea</h3>
+          <p>Fresh milk tea served hot.</p>
+          <div class="price">₹15</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img
+          src="https://images.unsplash.com/photo-1606491956689-2ea866880c84"
+          alt="Breakfast"
+        >
+
+        <div class="menu-content">
+          <h3>Breakfast</h3>
+          <p>Idli, dosa, pongal and other breakfast favourites.</p>
+          <div class="price">From ₹30</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="section-title">
+      <h2>Gallery</h2>
+
+      <p>
+        Our food, beverages and comfortable dining space.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <img
+        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+        alt="Restaurant seating"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
+        alt="Restaurant interior"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
+        alt="Food serving"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f"
+        alt="Indian food"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0"
+        alt="Breakfast food"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1559329007-40df8a9345d8"
+        alt="Coffee and snacks"
+      >
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Visit Us</h2>
+
+      <p>
+        Contact us for menu details, group orders and directions.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-box">
+        <h2>Vaibhavam</h2>
+
+        <p>
+          <strong>Address:</strong><br>
+          Near Hospital,<br>
+          Polur, Tiruvannamalai District,<br>
+          Tamil Nadu
+        </p>
+
+        <p>
+          <strong>Phone:</strong><br>
+
+          <a href="tel:+919999999999">
+            +91 99999 99999
+          </a>
+        </p>
+
+        <p>
+          <strong>Opening Hours:</strong><br>
+          Monday to Sunday<br>
+          6:00 AM to 10:00 PM
+        </p>
+
+        <a href="tel:+919999999999" class="btn">
+          Call Now
+        </a>
+
+        <a
+          href="https://wa.me/919999999999"
+          target="_blank"
+          rel="noopener"
+          class="btn"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <div>
+        <iframe
+          src="https://www.google.com/maps?q=Polur,Tamil%20Nadu&output=embed"
+          loading="lazy"
+          title="Vaibhavam location"
+        ></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
     <p>
-      Traditional taste, fresh coffee, tea, juice and delicious meals
-      in the heart of Polur.
+      © 2026 Vaibhavam, Polur. All rights reserved.
     </p>
+  </footer>
 
-    <a href="#menu" class="btn">View Menu</a>
+  <a
+    href="https://wa.me/919999999999"
+    class="whatsapp-floating"
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp
+  </a>
 
-    <a href="tel:+919999999999" class="btn secondary">
-      Call Now
-    </a>
-
-    <a
-      href="https://wa.me/919999999999"
-      class="btn secondary"
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp
-    </a>
-  </div>
-</section>
+</body>
+</html>
