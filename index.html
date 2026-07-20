@@ -34,8 +34,17 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-size: 26px;
       font-weight: bold;
+    }
+    .logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
     }
 
     nav a {
@@ -286,7 +295,11 @@
 <body>
 
   <header>
-    <div class="logo">VAIBHAVAM</div>
+    <div class="logo">
+      <img src="vaibhavam logo.png"
+        alt="Vaibhavam logo">
+      <span>VAIBHAVAM</span>
+    </div>
 
     <nav>
       <a href="#home">Home</a>
