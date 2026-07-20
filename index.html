@@ -35,20 +35,37 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      min-height: 100px;
+      min-height: 110px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
+      gap: 16px;
     }
 
-    .logo img {
-      width: 190px;
+    .brand img {
+      width: 110px;
       height: 90px;
       object-fit: contain;
       display: block;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      color: #ffd26a;
+      font-size: 31px;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+
+    .brand-text p {
+      margin: 6px 0 0;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     nav {
@@ -292,9 +309,22 @@
         padding: 8px 5%;
       }
 
-      .logo img {
-        width: 170px;
-        height: 85px;
+      .brand {
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+
+      .brand img {
+        width: 95px;
+        height: 80px;
+      }
+
+      .brand-text h1 {
+        font-size: 27px;
+      }
+
+      .brand-text p {
+        font-size: 10px;
       }
 
       nav {
@@ -338,9 +368,22 @@
         min-height: auto;
       }
 
-      .logo img {
-        width: 145px;
-        height: 78px;
+      .brand {
+        gap: 8px;
+      }
+
+      .brand img {
+        width: 72px;
+        height: 68px;
+      }
+
+      .brand-text h1 {
+        font-size: 21px;
+      }
+
+      .brand-text p {
+        font-size: 8px;
+        letter-spacing: 0.5px;
       }
 
       nav {
@@ -393,11 +436,16 @@
 <body>
 
   <header>
-    <div class="logo">
+    <div class="brand">
       <img
         src="./logo.png"
         alt="Vaibhavam Logo"
       >
+
+      <div class="brand-text">
+        <h1>VAIBHAVAM</h1>
+        <p>COFFEE • TEA • JUICE • MEALS</p>
+      </div>
     </div>
 
     <nav>
@@ -483,30 +531,22 @@
     <div class="features">
       <div class="feature-card">
         <h3>Fresh Food</h3>
-        <p>
-          Food and beverages prepared fresh every day.
-        </p>
+        <p>Food and beverages prepared fresh every day.</p>
       </div>
 
       <div class="feature-card">
         <h3>Traditional Taste</h3>
-        <p>
-          Authentic South Indian flavours and recipes.
-        </p>
+        <p>Authentic South Indian flavours and recipes.</p>
       </div>
 
       <div class="feature-card">
         <h3>Family Friendly</h3>
-        <p>
-          A clean and comfortable place for families.
-        </p>
+        <p>A clean and comfortable place for families.</p>
       </div>
 
       <div class="feature-card">
         <h3>Parking</h3>
-        <p>
-          Convenient parking space for customers.
-        </p>
+        <p>Convenient parking space for customers.</p>
       </div>
     </div>
   </section>
@@ -530,14 +570,8 @@
 
         <div class="menu-content">
           <h3>Filter Coffee</h3>
-
-          <p>
-            Traditional South Indian filter coffee.
-          </p>
-
-          <div class="price">
-            ₹25
-          </div>
+          <p>Traditional South Indian filter coffee.</p>
+          <div class="price">₹25</div>
         </div>
       </div>
 
@@ -549,14 +583,8 @@
 
         <div class="menu-content">
           <h3>South Indian Meals</h3>
-
-          <p>
-            Rice, sambar, rasam, vegetables, curd and accompaniments.
-          </p>
-
-          <div class="price">
-            ₹80
-          </div>
+          <p>Rice, sambar, rasam, vegetables, curd and accompaniments.</p>
+          <div class="price">₹80</div>
         </div>
       </div>
 
@@ -568,14 +596,8 @@
 
         <div class="menu-content">
           <h3>Evening Snacks</h3>
-
-          <p>
-            Freshly prepared vadai, bajji and other snacks.
-          </p>
-
-          <div class="price">
-            From ₹15
-          </div>
+          <p>Freshly prepared vadai, bajji and other snacks.</p>
+          <div class="price">From ₹15</div>
         </div>
       </div>
 
@@ -587,14 +609,8 @@
 
         <div class="menu-content">
           <h3>Fresh Juice</h3>
-
-          <p>
-            Seasonal fruit juices prepared fresh.
-          </p>
-
-          <div class="price">
-            From ₹40
-          </div>
+          <p>Seasonal fruit juices prepared fresh.</p>
+          <div class="price">From ₹40</div>
         </div>
       </div>
 
@@ -606,14 +622,8 @@
 
         <div class="menu-content">
           <h3>Tea</h3>
-
-          <p>
-            Fresh milk tea served hot.
-          </p>
-
-          <div class="price">
-            ₹15
-          </div>
+          <p>Fresh milk tea served hot.</p>
+          <div class="price">₹15</div>
         </div>
       </div>
 
@@ -625,14 +635,8 @@
 
         <div class="menu-content">
           <h3>Breakfast</h3>
-
-          <p>
-            Idli, dosa, pongal and other breakfast favourites.
-          </p>
-
-          <div class="price">
-            From ₹30
-          </div>
+          <p>Idli, dosa, pongal and other breakfast favourites.</p>
+          <div class="price">From ₹30</div>
         </div>
       </div>
 
