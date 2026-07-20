@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Vaibhavam | Coffee, Tea, Juice & Meals</title>
 
   <style>
@@ -85,18 +90,18 @@
       padding: 80px 8%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 40px;
       background:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        linear-gradient(
+          rgba(0, 0, 0, 0.58),
+          rgba(0, 0, 0, 0.58)
+        ),
         url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f")
         center/cover no-repeat;
       color: white;
     }
 
     .hero-content {
-      flex: 1;
-      max-width: 650px;
+      max-width: 700px;
     }
 
     .hero h1 {
@@ -109,21 +114,6 @@
       font-size: 21px;
       margin-bottom: 28px;
       max-width: 650px;
-    }
-
-    .hero-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-image img {
-      width: 100%;
-      max-width: 520px;
-      border-radius: 18px;
-      object-fit: cover;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     }
 
     .btn {
@@ -349,18 +339,13 @@
       }
 
       .hero {
-        flex-direction: column;
+        min-height: 72vh;
         text-align: center;
         justify-content: center;
-        min-height: auto;
       }
 
       .hero h1 {
         font-size: 40px;
-      }
-
-      .hero-image img {
-        max-width: 100%;
       }
 
       .about-grid,
@@ -410,7 +395,7 @@
       }
 
       .hero {
-        padding: 60px 6%;
+        padding: 70px 6%;
       }
 
       .hero h1 {
@@ -452,7 +437,10 @@
 
   <header>
     <div class="brand">
-      <img src="./logo.png" alt="Vaibhavam Logo">
+      <img
+        src="./logo.png"
+        alt="Vaibhavam Logo"
+      >
 
       <div class="brand-text">
         <h1>VAIBHAVAM</h1>
@@ -478,9 +466,13 @@
         in the heart of Polur.
       </p>
 
-      <a href="#menu" class="btn">View Menu</a>
+      <a href="#menu" class="btn">
+        View Menu
+      </a>
 
-      <a href="tel:+919999999999" class="btn secondary">Call Now</a>
+      <a href="tel:+919999999999" class="btn secondary">
+        Call Now
+      </a>
 
       <a
         href="https://wa.me/919999999999"
@@ -491,16 +483,15 @@
         WhatsApp
       </a>
     </div>
-
-    <div class="hero-image">
-      <img src="./banana-leaf-meals.jpg" alt="Banana Leaf Meals">
-    </div>
   </section>
 
   <section id="about">
     <div class="section-title">
       <h2>About Vaibhavam</h2>
-      <p>Good food, good mood and warm hospitality.</p>
+
+      <p>
+        Good food, good mood and warm hospitality.
+      </p>
     </div>
 
     <div class="about-grid">
@@ -525,8 +516,8 @@
 
       <div class="about-image">
         <img
-          src="./banana-leaf-meals.jpg"
-          alt="Banana Leaf Meals"
+          src="https://images.unsplash.com/photo-1552566626-52f8b828add9"
+          alt="Restaurant interior"
         >
       </div>
     </div>
@@ -563,21 +554,20 @@
   <section id="menu">
     <div class="section-title">
       <h2>Popular Menu</h2>
-      <p>Coffee, tea, juice, snacks and traditional meals.</p>
+
+      <p>
+        Coffee, tea, juice, snacks and traditional meals.
+      </p>
     </div>
 
     <div class="menu-grid">
-      <div class="menu-card">
-        <img src="./banana-leaf-meals.jpg" alt="Meals">
-        <div class="menu-content">
-          <h3>Banana Leaf Meals</h3>
-          <p>Traditional South Indian meals served on banana leaf.</p>
-          <div class="price">₹80</div>
-        </div>
-      </div>
 
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Filter Coffee">
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+          alt="Filter Coffee"
+        >
+
         <div class="menu-content">
           <h3>Filter Coffee</h3>
           <p>Traditional South Indian filter coffee.</p>
@@ -586,16 +576,24 @@
       </div>
 
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574" alt="Tea">
+        <img
+          src="https://images.unsplash.com/photo-1565557623262-b51c2513a641"
+          alt="South Indian Meals"
+        >
+
         <div class="menu-content">
-          <h3>Tea</h3>
-          <p>Fresh milk tea served hot.</p>
-          <div class="price">₹15</div>
+          <h3>South Indian Meals</h3>
+          <p>Rice, sambar, rasam, vegetables, curd and accompaniments.</p>
+          <div class="price">₹80</div>
         </div>
       </div>
 
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Snacks">
+        <img
+          src="https://images.unsplash.com/photo-1601050690597-df0568f70950"
+          alt="Evening Snacks"
+        >
+
         <div class="menu-content">
           <h3>Evening Snacks</h3>
           <p>Freshly prepared vadai, bajji and other snacks.</p>
@@ -604,7 +602,11 @@
       </div>
 
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba" alt="Fresh Juice">
+        <img
+          src="https://images.unsplash.com/photo-1600271886742-f049cd451bba"
+          alt="Fresh Juice"
+        >
+
         <div class="menu-content">
           <h3>Fresh Juice</h3>
           <p>Seasonal fruit juices prepared fresh.</p>
@@ -613,39 +615,87 @@
       </div>
 
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84" alt="Breakfast">
+        <img
+          src="https://images.unsplash.com/photo-1544787219-7f47ccb76574"
+          alt="Tea"
+        >
+
+        <div class="menu-content">
+          <h3>Tea</h3>
+          <p>Fresh milk tea served hot.</p>
+          <div class="price">₹15</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img
+          src="https://images.unsplash.com/photo-1606491956689-2ea866880c84"
+          alt="Breakfast"
+        >
+
         <div class="menu-content">
           <h3>Breakfast</h3>
           <p>Idli, dosa, pongal and other breakfast favourites.</p>
           <div class="price">From ₹30</div>
         </div>
       </div>
+
     </div>
   </section>
 
   <section id="gallery">
     <div class="section-title">
       <h2>Gallery</h2>
-      <p>Our food, beverages and comfortable dining space.</p>
+
+      <p>
+        Our food, beverages and comfortable dining space.
+      </p>
     </div>
 
     <div class="gallery-grid">
-      <img src="./banana-leaf-meals.jpg" alt="Banana leaf meals">
-      <img src="./banana-leaf-meals.jpg" alt="Meals serving">
-      <img src="./banana-leaf-meals.jpg" alt="Traditional meals">
-      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Restaurant interior">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Restaurant seating">
-      <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8" alt="Coffee and snacks">
+      <img
+        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+        alt="Restaurant seating"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
+        alt="Restaurant interior"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
+        alt="Food serving"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f"
+        alt="Indian food"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0"
+        alt="Breakfast food"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1559329007-40df8a9345d8"
+        alt="Coffee and snacks"
+      >
     </div>
   </section>
 
   <section id="contact">
     <div class="section-title">
       <h2>Visit Us</h2>
-      <p>Contact us for menu details, group orders and directions.</p>
+
+      <p>
+        Contact us for menu details, group orders and directions.
+      </p>
     </div>
 
     <div class="contact-grid">
+
       <div class="contact-box">
         <h2>Vaibhavam</h2>
 
@@ -658,7 +708,10 @@
 
         <p>
           <strong>Phone:</strong><br>
-          <a href="tel:+919999999999">+91 99999 99999</a>
+
+          <a href="tel:+919999999999">
+            +91 99999 99999
+          </a>
         </p>
 
         <p>
@@ -667,7 +720,9 @@
           6:00 AM to 10:00 PM
         </p>
 
-        <a href="tel:+919999999999" class="btn">Call Now</a>
+        <a href="tel:+919999999999" class="btn">
+          Call Now
+        </a>
 
         <a
           href="https://wa.me/919999999999"
@@ -686,11 +741,14 @@
           title="Vaibhavam location"
         ></iframe>
       </div>
+
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Vaibhavam, Polur. All rights reserved.</p>
+    <p>
+      © 2026 Vaibhavam, Polur. All rights reserved.
+    </p>
   </footer>
 
   <a
